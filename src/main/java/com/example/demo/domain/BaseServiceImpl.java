@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class BaseServiceImpl<T extends BaseDomain> implements BaseService<T> {
+public abstract class BaseServiceImpl<T extends BaseDomain> implements BaseService<T> {
 
 	@Autowired
 	private BaseRepository<T> baseRepository;
