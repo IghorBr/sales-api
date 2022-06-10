@@ -14,8 +14,9 @@ import lombok.Setter;
 public class UserDTO extends BaseDTO {
 	private static final long serialVersionUID = 1L;
 	
-	@NotEmpty private String nome;
-	@NotEmpty private String sobrenome;
+	@NotEmpty private String name;
+	@NotEmpty private String username;
+	@NotEmpty private String lastName;
 	@NotEmpty @Email private String email;
-	@NotEmpty private String senha;
+	@NotEmpty private String userType;
 }
