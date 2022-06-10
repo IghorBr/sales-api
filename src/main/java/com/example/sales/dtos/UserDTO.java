@@ -1,9 +1,9 @@
-package com.example.demo.dtos;
+package com.example.sales.dtos;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
-import com.example.demo.domain.BaseDTO;
+import com.example.sales.domain.BaseDTO;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

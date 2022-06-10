@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.sales.domain;
 
 import java.util.Objects;
 

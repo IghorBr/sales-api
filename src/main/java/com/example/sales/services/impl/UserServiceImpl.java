@@ -1,12 +1,12 @@
-package com.example.demo.services.impl;
+package com.example.sales.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.domain.BaseServiceImpl;
-import com.example.demo.entities.User;
-import com.example.demo.repositories.UserRepository;
-import com.example.demo.services.UserService;
+import com.example.sales.domain.BaseServiceImpl;
+import com.example.sales.entities.User;
+import com.example.sales.repositories.UserRepository;
+import com.example.sales.services.UserService;
 
 @Service
 public class UserServiceImpl extends BaseServiceImpl<User> implements UserService {

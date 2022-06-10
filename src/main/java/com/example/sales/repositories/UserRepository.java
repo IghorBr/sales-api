@@ -1,9 +1,9 @@
-package com.example.demo.repositories;
+package com.example.sales.repositories;
 
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.domain.BaseRepository;
-import com.example.demo.entities.User;
+import com.example.sales.domain.BaseRepository;
+import com.example.sales.entities.User;
 
 @Repository
 public interface UserRepository extends BaseRepository<User> {
