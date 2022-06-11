@@ -19,4 +19,6 @@ public class UserDTO extends BaseDTO {
 	@NotEmpty private String lastName;
 	@NotEmpty @Email private String email;
 	@NotEmpty private String userType;
+	
+	private AddressDTO address;
 }

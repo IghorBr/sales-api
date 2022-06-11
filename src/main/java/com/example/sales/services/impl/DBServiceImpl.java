@@ -25,9 +25,9 @@ public class DBServiceImpl {
 		
 //		User(String email, String username, String name, String lastName, String password, UserType userType)
 		
-		User user1 = new User("user1@email.com", "user1", "Usuário 1", "Last Name", "123", UserType.USER);
+		User user1 = new User("user3@email.com", "user1", "Usuário 1", "Last Name", "123", UserType.USER);
 		User user2 = new User("user2@email.com", "user2", "Usuário 2", "Last Name", "123", UserType.USER);
-		User user3 = new User("user3@email.com", "user3", "Usuário 3", "Last Name", "123", UserType.USER);
+		User user3 = new User("user1@email.com", "user3", "Usuário 3", "Last Name", "123", UserType.USER);
 		
 		userService.saveAll(Arrays.asList(user1, user2, user3));
 		
@@ -52,10 +52,10 @@ public class DBServiceImpl {
 		productService.saveAll(Arrays.asList(prd1, prd2, prd3));
 		
 		Purchase p1 = new Purchase(user1);
-		p1.addProduct(prd1, 0., 1).addProduct(prd2, 0., 1).addProduct(prd3, 0., 1);
+		p1.addProduct(prd1, 1).addProduct(prd2, 1).addProduct(prd3, 1);
 		
 		Purchase p2 = new Purchase(user2);
-		p2.addProduct(prd1, 0., 2).addProduct(prd2, 0., 1).addProduct(prd3, 0., 3);
+		p2.addProduct(prd1, 2).addProduct(prd2, 1).addProduct(prd3, 3);
 		
 		purchaseService.saveAll(Arrays.asList(p1, p2));
 		productService.saveAll(Arrays.asList(prd1, prd2, prd3));

@@ -11,9 +11,8 @@ import lombok.Setter;
 public class PurchaseProductDTO implements Serializable {
 	private static final long serialVersionUID = -8199681871971119984L;
 	
-	private Double discount;
-	private Integer amount;
+	private Integer quantity;
 	private Double price;
 	
-	private ProductDTO idProduct;
+	private Long productId;
 }

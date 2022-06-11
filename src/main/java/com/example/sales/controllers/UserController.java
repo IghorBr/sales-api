@@ -10,7 +10,7 @@ import com.example.sales.entities.User;
 import com.example.sales.services.UserService;
 
 @RestController
-@RequestMapping(value = "/usuarios")
+@RequestMapping(value = "/users")
 public class UserController extends BaseController<User, UserDTO> {
 
 	public UserController() {

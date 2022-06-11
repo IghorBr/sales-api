@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 
 import com.example.sales.domain.BaseDomain;
 
@@ -17,6 +19,13 @@ import lombok.Setter;
 @Getter @Setter
 public class Product extends BaseDomain {
 
+	@PrePersist
+	@PreUpdate
+	void verificaQuantidade() throws Exception {
+		if (quantity < 0)
+			throw new Exception("Quantidade menor que 0");
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "product_id")

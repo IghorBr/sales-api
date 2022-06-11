@@ -16,6 +16,7 @@ public class PurchaseDTO extends BaseDTO {
 	
 	private Date boughtAt;
 	private Double total;
+	private Double discount;
 	private UserDTO user;
 	
 	private Set<PurchaseProductDTO> itens;

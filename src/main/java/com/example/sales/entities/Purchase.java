@@ -38,6 +38,8 @@ public class Purchase extends BaseDomain {
 	@Column(name = "bought_at")
 	private Date boughtAt;
 	
+	private Double discount = 0.;
+	
 	@OneToMany(mappedBy = "id.purchase", cascade = CascadeType.ALL)
 	private Set<PurchaseProduct> itens = new HashSet<>();
 	
@@ -50,8 +52,8 @@ public class Purchase extends BaseDomain {
 		this.user = user;
 	}
 	
-	public Purchase addProduct(Product p, Double discount, Integer amount) {
-		PurchaseProduct pp = new PurchaseProduct(this, p, discount, amount);
+	public Purchase addProduct(Product p, Integer amount) {
+		PurchaseProduct pp = new PurchaseProduct(this, p, amount);
 		itens.add(pp);
 		return this;
 	}
@@ -61,7 +63,7 @@ public class Purchase extends BaseDomain {
 		for (PurchaseProduct pp : itens)
 			amount += pp.getSubTotal();
 		
-		return amount;
+		return amount - discount;
 	}
 	
 }

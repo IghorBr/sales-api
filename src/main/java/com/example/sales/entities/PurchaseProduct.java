@@ -17,12 +17,11 @@ public class PurchaseProduct {
 	@EmbeddedId
 	private PurchaseProductPK id = new PurchaseProductPK();
 	
-	private Double discount;
 	private Integer quantity;
 	private Double price;
 	
 	public Double getSubTotal() {
-		return (price - discount) * quantity;
+		return price * quantity;
 	}
 	
 	public Purchase getPurchase() {
@@ -38,10 +37,9 @@ public class PurchaseProduct {
 		return Objects.hash(id);
 	}
 	
-	public PurchaseProduct(Purchase purchase, Product product, Double discount, Integer quantity) {
+	public PurchaseProduct(Purchase purchase, Product product, Integer quantity) {
 		this.id.setPurchase(purchase);
 		this.id.setProduct(product);
-		this.discount = discount;
 		this.quantity = quantity;
 		this.price = product.getPrice();
 		
